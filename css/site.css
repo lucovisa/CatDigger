@@ -50,7 +50,8 @@ body {
     background-color: var(--bg);
     border-bottom: 1px solid var(--border);
     z-index: 100;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     padding: 14px 20px;
     gap: 20px;
@@ -61,7 +62,7 @@ body {
     display: flex;
     align-items: center;
     gap: 14px;
-    flex: 1;
+    justify-self: start;
 }
 
 .header-item {
@@ -98,8 +99,8 @@ body {
     display: flex;
     gap: 22px;
     flex-wrap: wrap;
-    flex: 2;
     justify-content: center;
+    justify-self: center;
 }
 
 .nav button {
@@ -146,7 +147,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
+    justify-self: end;
     transition: background-color 0.2s, border-color 0.2s, color 0.3s;
 }
 
@@ -159,15 +160,25 @@ body {
     padding: 140px 20px;
     border-bottom: 1px solid var(--border);
     background: var(--bg);
-    transition: padding 0.4s ease;
+    transition: padding 0.35s ease;
 }
 
 .hero.collapsed {
     padding: 30px 20px;
 }
 
+#heroContent {
+    max-height: 500px;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.25s ease, margin 0.35s ease;
+}
+
 .hero.collapsed #heroContent {
-    display: none;
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+    pointer-events: none;
 }
 
 .hero h1 {
@@ -204,7 +215,7 @@ body {
     letter-spacing: 3px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .badge:hover {
@@ -362,6 +373,12 @@ body {
     width: 90px;
     text-align: left;
     font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.dev-label:hover {
+    color: var(--text-muted);
 }
 
 .dev-url {
