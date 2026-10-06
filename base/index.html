@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Digger игра в разработке</title>
+    <meta name="description" content="Cat Digger кооперативная игра с процедурной генерацией и разрушаемым миром. Разработчик Lucovisa.">
+    <link rel="icon" href="../assets/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">Cat Digger</div>
+            <nav class="nav">
+                <a href="#about">Об игре</a>
+                <a href="#status">Статус</a>
+                <a href="#developer">Разработчик</a>
+                <a href="#donate">Донат</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Cat Digger</h1>
+            <p class="subtitle">Кооперативная игра в разработке</p>
+            <span class="badge">В разработке</span>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Об игре</h2>
+            <p>Cat Digger это кооперативная игра с процедурной генерацией уровней и полностью разрушаемым миром.</p>
+            <p>Жанр: кооперативный шутер от первого лица с элементами выживания, добычи ресурсов и исследования процедурно генерируемых пещер.</p>
+            <p>Играть можно будет в одиночку или в команде до четырех игроков.</p>
+        </div>
+    </section>
+
+    <section id="status" class="section section-dark">
+        <div class="container">
+            <h2>Статус разработки</h2>
+            <p>Игра находится на стадии активной разработки.</p>
+            <p>Дата релиза пока не объявлена.</p>
+            <p>Следить за новостями можно в Twitter и Steam.</p>
+        </div>
+    </section>
+
+    <section id="developer" class="section">
+        <div class="container">
+            <h2>Разработчик</h2>
+            <p class="dev-name">Lucovisa</p>
+            <div class="links">
+                <a href="https://lucovisa.github.io/Lucovisa/" target="_blank">Сайт</a>
+                <a href="https://github.com/lucovisa" target="_blank">GitHub</a>
+                <a href="https://twitter.com/Lukovica467771" target="_blank">Twitter</a>
+                <a href="https://steamcommunity.com/id/Lucovisa" target="_blank">Steam</a>
+                <a href="mailto:lucovisa24@gmail.com">Email</a>
+                <a href="https://phantom.app/" target="_blank">Phantom: @lucovisa</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="donate" class="section section-dark">
+        <div class="container">
+            <h2>Поддержать разработку</h2>
+            <a href="#" class="btn">Донат ❤</a>
+            <div class="wallets">
+                <div class="wallet">
+                    <div class="wallet-info">
+                        <span class="wallet-name">ETH/USDT (ERC 20)</span>
+                        <span class="wallet-address" id="ethAddress">0xFa78966938743C9168abFC2acD6D7751d7dA35Cf</span>
+                    </div>
+                    <button class="btn-copy" onclick="copyWallet('ethAddress')">Copy</button>
+                </div>
+                <div class="wallet">
+                    <div class="wallet-info">
+                        <span class="wallet-name">BTC (BITCOIN MAINNET)</span>
+                        <span class="wallet-address" id="btcAddress">bc1q60tvcsw4guyhxa5e3n47eqmj0s3lpxzkxldpvp</span>
+                    </div>
+                    <button class="btn-copy" onclick="copyWallet('btcAddress')">Copy</button>
+                </div>
+                <div class="wallet">
+                    <div class="wallet-info">
+                        <span class="wallet-name">TON/USDT (THE OPEN NETWORK)</span>
+                        <span class="wallet-address" id="tonAddress">UQDsZ_8MkBtjjp-pVa5Fefdg1jtJApOZ7oeFF3WBILnwQcHF</span>
+                    </div>
+                    <button class="btn-copy" onclick="copyWallet('tonAddress')">Copy</button>
+                </div>
+                <div class="wallet">
+                    <div class="wallet-info">
+                        <span class="wallet-name">Solana (SOL)</span>
+                        <span class="wallet-address" id="solAddress">9NE5YjEtHjBUAVchULocNZ4i3abjZ8adZUAWx7qB1wBv</span>
+                    </div>
+                    <button class="btn-copy" onclick="copyWallet('solAddress')">Copy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+    </footer>
+</body>
+</html>
