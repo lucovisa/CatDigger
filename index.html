@@ -26,18 +26,20 @@
 <body>
     <header class="header">
         <div class="container">
-            <a href="#" class="logo">
-                <img src="assets/icon.ico" alt="Cat Digger" class="logo-icon">
-                <span>Cat Digger</span>
-            </a>
+            <div class="logo">
+                <a href="https://github.com/lucovisa" target="_blank" class="logo-paw">
+                    <img src="assets/icon.ico" alt="Lucovisa" class="logo-icon">
+                </a>
+                <a href="https://github.com/lucovisa/CatDigger" target="_blank" class="logo-text">Cat Digger</a>
+            </div>
             <nav class="nav">
-                <a href="#about">About</a>
-                <a href="#concept">Concept Art</a>
-                <a href="#screenshots">Screenshots</a>
-                <a href="#reviews">Reviews</a>
-                <a href="#store">Store</a>
-                <a href="#developer">Developer</a>
-                <a href="#donate">Donate</a>
+                <a href="#about" class="nav-link active" data-tab="about">About</a>
+                <a href="#concept" class="nav-link" data-tab="concept">Concept Art</a>
+                <a href="#screenshots" class="nav-link" data-tab="screenshots">Screenshots</a>
+                <a href="#reviews" class="nav-link" data-tab="reviews">Reviews</a>
+                <a href="#store" class="nav-link" data-tab="store">Store</a>
+                <a href="#developer" class="nav-link" data-tab="developer">Developer</a>
+                <a href="#donate" class="nav-link" data-tab="donate">Donate</a>
             </nav>
             <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
                 <span class="theme-icon">◐</span>
@@ -47,143 +49,147 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Cat Digger</h1>
+            <h1 onclick="location.reload()">Cat Digger</h1>
             <p class="subtitle">Cooperative game in development</p>
             <span class="badge">In Development</span>
         </div>
     </section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About the game</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>Cat Digger is a cooperative first person shooter with procedural generation and a fully destructible world.</p>
-                    <p>Players will gather resources, explore endless caves and survive in a hostile environment.</p>
-                    <p>Play solo or with a team of up to four players.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <span class="stat-value">4</span>
-                        <span class="stat-label">Players in co op</span>
+    <main class="tab-content">
+        <section id="about" class="section tab-panel active">
+            <div class="container">
+                <h2>About the game</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Cat Digger is a cooperative first person shooter with procedural generation and a fully destructible world.</p>
+                        <p>Players will gather resources, explore endless caves and survive in a hostile environment.</p>
+                        <p>Play solo or with a team of up to four players.</p>
                     </div>
-                    <div class="stat">
-                        <span class="stat-value">∞</span>
-                        <span class="stat-label">Procedural levels</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-value">100%</span>
-                        <span class="stat-label">Destructible world</span>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-value">4</span>
+                            <span class="stat-label">Players in co op</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">∞</span>
+                            <span class="stat-label">Procedural levels</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">100%</span>
+                            <span class="stat-label">Destructible world</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="concept" class="section section-alt">
-        <div class="container">
-            <h2>Concept Art</h2>
-            <div class="gallery">
-                <div class="gallery-item">Concept 1</div>
-                <div class="gallery-item">Concept 2</div>
-                <div class="gallery-item">Concept 3</div>
-                <div class="gallery-item">Concept 4</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="screenshots" class="section">
-        <div class="container">
-            <h2>Screenshots</h2>
-            <div class="gallery">
-                <div class="gallery-item">Screenshot 1</div>
-                <div class="gallery-item">Screenshot 2</div>
-                <div class="gallery-item">Screenshot 3</div>
-                <div class="gallery-item">Screenshot 4</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="reviews" class="section section-alt">
-        <div class="container">
-            <h2>Reviews</h2>
-            <div class="reviews">
-                <div class="review">
-                    <p class="review-text">Reviews will appear after the game release.</p>
-                    <span class="review-author">Reviewers</span>
-                </div>
-                <div class="review">
-                    <p class="review-text">Press and bloggers will be able to leave their reviews here.</p>
-                    <span class="review-author">Press</span>
+        <section id="concept" class="section section-alt tab-panel">
+            <div class="container">
+                <h2>Concept Art</h2>
+                <div class="gallery">
+                    <div class="gallery-item">Concept 1</div>
+                    <div class="gallery-item">Concept 2</div>
+                    <div class="gallery-item">Concept 3</div>
+                    <div class="gallery-item">Concept 4</div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="store" class="section">
-        <div class="container">
-            <h2>Store</h2>
-            <p class="store-text">The Steam page will appear after the announcement.</p>
-            <div class="store-buttons">
-                <a href="https://steamcommunity.com/id/Lucovisa" target="_blank" class="btn">Steam</a>
-                <a href="#" class="btn btn-outline">Soon</a>
+        <section id="screenshots" class="section tab-panel">
+            <div class="container">
+                <h2>Screenshots</h2>
+                <div class="gallery">
+                    <div class="gallery-item">Screenshot 1</div>
+                    <div class="gallery-item">Screenshot 2</div>
+                    <div class="gallery-item">Screenshot 3</div>
+                    <div class="gallery-item">Screenshot 4</div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="developer" class="section section-alt">
-        <div class="container">
-            <h2>Developer</h2>
-            <p class="dev-name">Lucovisa</p>
-            <div class="links">
-                <a href="https://lucovisa.github.io/Lucovisa/" target="_blank">Website</a>
-                <a href="https://github.com/lucovisa" target="_blank">GitHub</a>
-                <a href="https://twitter.com/Lukovica467771" target="_blank">Twitter</a>
-                <a href="https://steamcommunity.com/id/Lucovisa" target="_blank">Steam</a>
-                <a href="mailto:lucovisa24@gmail.com">Email</a>
-                <a href="https://phantom.app/" target="_blank">Phantom: @lucovisa</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="donate" class="section">
-        <div class="container">
-            <h2>Support the development</h2>
-            <a href="#" class="btn donate-btn">Donate ❤</a>
-            <div class="wallets">
-                <div class="wallet">
-                    <div class="wallet-info">
-                        <span class="wallet-name">ETH/USDT (ERC 20)</span>
-                        <span class="wallet-address" id="ethAddress">0xFa78966938743C9168abFC2acD6D7751d7dA35Cf</span>
+        <section id="reviews" class="section section-alt tab-panel">
+            <div class="container">
+                <h2>Reviews</h2>
+                <div class="reviews">
+                    <div class="review">
+                        <p class="review-text">Reviews will appear after the game release.</p>
+                        <span class="review-author">Reviewers</span>
                     </div>
-                    <button class="btn-copy" onclick="copyWallet('ethAddress')">Copy</button>
-                </div>
-                <div class="wallet">
-                    <div class="wallet-info">
-                        <span class="wallet-name">BTC (BITCOIN MAINNET)</span>
-                        <span class="wallet-address" id="btcAddress">bc1q60tvcsw4guyhxa5e3n47eqmj0s3lpxzkxldpvp</span>
+                    <div class="review">
+                        <p class="review-text">Press and bloggers will be able to leave their reviews here.</p>
+                        <span class="review-author">Press</span>
                     </div>
-                    <button class="btn-copy" onclick="copyWallet('btcAddress')">Copy</button>
-                </div>
-                <div class="wallet">
-                    <div class="wallet-info">
-                        <span class="wallet-name">TON/USDT (THE OPEN NETWORK)</span>
-                        <span class="wallet-address" id="tonAddress">UQDsZ_8MkBtjjp-pVa5Fefdg1jtJApOZ7oeFF3WBILnwQcHF</span>
-                    </div>
-                    <button class="btn-copy" onclick="copyWallet('tonAddress')">Copy</button>
-                </div>
-                <div class="wallet">
-                    <div class="wallet-info">
-                        <span class="wallet-name">Solana (SOL)</span>
-                        <span class="wallet-address" id="solAddress">9NE5YjEtHjBUAVchULocNZ4i3abjZ8adZUAWx7qB1wBv</span>
-                    </div>
-                    <button class="btn-copy" onclick="copyWallet('solAddress')">Copy</button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="store" class="section tab-panel">
+            <div class="container">
+                <h2>Store</h2>
+                <p class="store-text">The Steam page will appear after the announcement.</p>
+                <div class="store-buttons">
+                    <a href="https://steamcommunity.com/id/Lucovisa" target="_blank" class="btn">Steam</a>
+                    <a href="#" class="btn btn-outline">Soon</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="developer" class="section section-alt tab-panel">
+            <div class="container">
+                <h2>Developer</h2>
+                <p class="dev-name">Lucovisa</p>
+                <div class="links">
+                    <a href="https://lucovisa.github.io/Lucovisa/" target="_blank">Website</a>
+                    <a href="https://github.com/lucovisa" target="_blank">GitHub</a>
+                    <a href="https://twitter.com/Lukovica467771" target="_blank">Twitter</a>
+                    <a href="https://steamcommunity.com/id/Lucovisa" target="_blank">Steam</a>
+                    <a href="mailto:lucovisa24@gmail.com">Email</a>
+                    <a href="https://phantom.app/" target="_blank">Phantom: @lucovisa</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="donate" class="section tab-panel">
+            <div class="container">
+                <h2>Support the development</h2>
+                <a href="#" class="btn donate-btn">Donate ❤</a>
+                <div class="wallets">
+                    <div class="wallet">
+                        <div class="wallet-info">
+                            <span class="wallet-name">ETH/USDT (ERC 20)</span>
+                            <span class="wallet-address" id="ethAddress">0xFa78966938743C9168abFC2acD6D7751d7dA35Cf</span>
+                        </div>
+                        <button class="btn-copy" onclick="copyWallet('ethAddress')">Copy</button>
+                    </div>
+                    <div class="wallet">
+                        <div class="wallet-info">
+                            <span class="wallet-name">BTC (BITCOIN MAINNET)</span>
+                            <span class="wallet-address" id="btcAddress">bc1q60tvcsw4guyhxa5e3n47eqmj0s3lpxzkxldpvp</span>
+                        </div>
+                        <button class="btn-copy" onclick="copyWallet('btcAddress')">Copy</button>
+                    </div>
+                    <div class="wallet">
+                        <div class="wallet-info">
+                            <span class="wallet-name">TON/USDT (THE OPEN NETWORK)</span>
+                            <span class="wallet-address" id="tonAddress">UQDsZ_8MkBtjjp-pVa5Fefdg1jtJApOZ7oeFF3WBILnwQcHF</span>
+                        </div>
+                        <button class="btn-copy" onclick="copyWallet('tonAddress')">Copy</button>
+                    </div>
+                    <div class="wallet">
+                        <div class="wallet-info">
+                            <span class="wallet-name">Solana (SOL)</span>
+                            <span class="wallet-address" id="solAddress">9NE5YjEtHjBUAVchULocNZ4i3abjZ8adZUAWx7qB1wBv</span>
+                        </div>
+                        <button class="btn-copy" onclick="copyWallet('solAddress')">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
