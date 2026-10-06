@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat Digger игра в разработке</title>
+    <title>Cat Digger</title>
     <meta name="description" content="Cat Digger кооперативная игра с процедурной генерацией и разрушаемым миром. Разработчик Lucovisa.">
     <link rel="icon" href="../assets/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/site.css">
@@ -11,13 +11,22 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="logo">Cat Digger</div>
+            <a href="#" class="logo">
+                <img src="../assets/icon.ico" alt="Cat Digger" class="logo-icon">
+                <span>Cat Digger</span>
+            </a>
             <nav class="nav">
                 <a href="#about">Об игре</a>
-                <a href="#status">Статус</a>
+                <a href="#concept">Концепт арт</a>
+                <a href="#screenshots">Скриншоты</a>
+                <a href="#reviews">Обзоры</a>
+                <a href="#store">Стор</a>
                 <a href="#developer">Разработчик</a>
                 <a href="#donate">Донат</a>
             </nav>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Переключить тему">
+                <span class="theme-icon">◐</span>
+            </button>
         </div>
     </header>
 
@@ -32,22 +41,82 @@
     <section id="about" class="section">
         <div class="container">
             <h2>Об игре</h2>
-            <p>Cat Digger это кооперативная игра с процедурной генерацией уровней и полностью разрушаемым миром.</p>
-            <p>Жанр: кооперативный шутер от первого лица с элементами выживания, добычи ресурсов и исследования процедурно генерируемых пещер.</p>
-            <p>Играть можно будет в одиночку или в команде до четырех игроков.</p>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Cat Digger это кооперативный шутер от первого лица с процедурной генерацией уровней и полностью разрушаемым миром.</p>
+                    <p>Игрокам предстоит добывать ресурсы, исследовать бесконечные пещеры и выживать в условиях враждебной среды.</p>
+                    <p>Играть можно в одиночку или в команде до четырех игроков.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-value">4</span>
+                        <span class="stat-label">Игрока в кооперативе</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">∞</span>
+                        <span class="stat-label">Процедурных уровней</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">100%</span>
+                        <span class="stat-label">Разрушаемый мир</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="status" class="section section-dark">
+    <section id="concept" class="section section-alt">
         <div class="container">
-            <h2>Статус разработки</h2>
-            <p>Игра находится на стадии активной разработки.</p>
-            <p>Дата релиза пока не объявлена.</p>
-            <p>Следить за новостями можно в Twitter и Steam.</p>
+            <h2>Концепт арт</h2>
+            <div class="gallery">
+                <div class="gallery-item">Концепт 1</div>
+                <div class="gallery-item">Концепт 2</div>
+                <div class="gallery-item">Концепт 3</div>
+                <div class="gallery-item">Концепт 4</div>
+            </div>
         </div>
     </section>
 
-    <section id="developer" class="section">
+    <section id="screenshots" class="section">
+        <div class="container">
+            <h2>Скриншоты</h2>
+            <div class="gallery">
+                <div class="gallery-item">Скриншот 1</div>
+                <div class="gallery-item">Скриншот 2</div>
+                <div class="gallery-item">Скриншот 3</div>
+                <div class="gallery-item">Скриншот 4</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="section section-alt">
+        <div class="container">
+            <h2>Обзоры</h2>
+            <div class="reviews">
+                <div class="review">
+                    <p class="review-text">Обзоры появятся после релиза игры.</p>
+                    <span class="review-author">Рецензенты</span>
+                </div>
+                <div class="review">
+                    <p class="review-text">Пресса и блогеры смогут оставить свои обзоры здесь.</p>
+                    <span class="review-author">Пресса</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="store" class="section">
+        <div class="container">
+            <h2>Стор</h2>
+            <p class="store-text">Страница игры в Steam появится после анонса.</p>
+            <div class="store-buttons">
+                <a href="https://steamcommunity.com/id/Lucovisa" target="_blank" class="btn">Steam</a>
+                <a href="#" class="btn btn-outline">Скоро</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="developer" class="section section-alt">
         <div class="container">
             <h2>Разработчик</h2>
             <p class="dev-name">Lucovisa</p>
@@ -62,10 +131,10 @@
         </div>
     </section>
 
-    <section id="donate" class="section section-dark">
+    <section id="donate" class="section">
         <div class="container">
             <h2>Поддержать разработку</h2>
-            <a href="#" class="btn">Донат ❤</a>
+            <a href="#" class="btn donate-btn">Донат ❤</a>
             <div class="wallets">
                 <div class="wallet">
                     <div class="wallet-info">
