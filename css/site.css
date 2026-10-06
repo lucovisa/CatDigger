@@ -64,7 +64,23 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+}
+
+.logo-discord {
+    display: flex;
+    align-items: center;
+}
+
+.discord-icon {
+    width: 128px;
+    height: 128px;
+    display: block;
+    transition: opacity 0.2s;
+}
+
+.discord-icon:hover {
+    opacity: 0.7;
 }
 
 .logo-paw {
@@ -410,6 +426,16 @@ body {
     gap: 12px;
     max-width: 720px;
     margin: 0 auto;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.wallets.open {
+    max-height: 800px;
+    opacity: 1;
+    margin-top: 20px;
 }
 
 .wallet {
@@ -496,6 +522,94 @@ body {
     word-break: break-all;
 }
 
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-overlay.open {
+    display: flex;
+}
+
+.modal {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 420px;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: modalIn 0.2s ease;
+}
+
+@keyframes modalIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.modal-icon {
+    font-size: 18px;
+}
+
+.modal-url {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.modal-text {
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 22px;
+    line-height: 1.5;
+    max-width: none;
+    text-align: left;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-btn {
+    background-color: var(--accent);
+    color: var(--accent-contrast);
+    border: none;
+    padding: 10px 26px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: opacity 0.2s;
+}
+
+.modal-btn:hover {
+    opacity: 0.85;
+}
+
 @media (max-width: 900px) {
     .nav {
         display: none;
@@ -513,6 +627,11 @@ body {
     .about-grid {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+    .discord-icon {
+        width: 64px;
+        height: 64px;
     }
 }
 
@@ -538,5 +657,10 @@ body {
 
     .hero h1 {
         font-size: 36px;
+    }
+
+    .discord-icon {
+        width: 48px;
+        height: 48px;
     }
 }

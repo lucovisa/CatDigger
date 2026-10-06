@@ -10,20 +10,18 @@ function copyWallet(id) {
     });
 }
 
-function copyDevLink() {
-    const link = document.getElementById('devLink').textContent;
-    const btn = event.target;
-    navigator.clipboard.writeText(link).then(() => {
-        const original = btn.textContent;
-        btn.textContent = 'Copied';
-        setTimeout(() => {
-            btn.textContent = original;
-        }, 2000);
-    });
+function toggleWallets() {
+    const block = document.getElementById('walletsBlock');
+    block.classList.toggle('open');
 }
 
-function notAnnounced() {
-    alert('The game is not announced yet.');
+function openModal(text) {
+    document.getElementById('modalText').textContent = text;
+    document.getElementById('modal').classList.add('open');
+}
+
+function closeModal(e) {
+    document.getElementById('modal').classList.remove('open');
 }
 
 function toggleTheme() {
@@ -33,19 +31,27 @@ function toggleTheme() {
     localStorage.setItem('theme', next);
 }
 
-function switchTab(tabId) {
+function switchTab(tabId, updateHash) {
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
     const panel = document.getElementById(tabId);
     const link = document.querySelector('.nav-link[data-tab="' + tabId + '"]');
     if (panel) panel.classList.add('active');
     if (link) link.classList.add('active');
+    if (updateHash !== false) {
+        history.replaceState(null, '', '#' + tabId);
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     const saved = localStorage.getItem('theme');
     if (saved) {
         document.documentElement.setAttribute('data-theme', saved);
+    }
+
+    const hash = window.location.hash.replace('#', '');
+    if (hash && document.getElementById(hash)) {
+        switchTab(hash, false);
     }
 
     document.querySelectorAll('.nav-link').forEach(link => {

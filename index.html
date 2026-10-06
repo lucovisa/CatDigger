@@ -12,13 +12,13 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Cat Digger">
     <meta property="og:description" content="Cooperative first person shooter with procedural generation and a fully destructible world. Developer Lucovisa.">
-    <meta property="og:image" content="assets/og-image.jpg">
+    <meta property="og:image" content="https://lucovisa.github.io/CatDigger/assets/og-image.jpg">
     <meta property="og:url" content="https://lucovisa.github.io/CatDigger/">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Cat Digger">
     <meta name="twitter:description" content="Cooperative first person shooter with procedural generation and a fully destructible world. Developer Lucovisa.">
-    <meta name="twitter:image" content="assets/og-image.jpg">
+    <meta name="twitter:image" content="https://lucovisa.github.io/CatDigger/assets/og-image.jpg">
     <meta name="twitter:site" content="@Lukovica467771">
 
     <link rel="stylesheet" href="css/site.css">
@@ -27,6 +27,9 @@
     <header class="header">
         <div class="container">
             <div class="logo">
+                <a href="https://discord.gg/xaCFGJAwr4" target="_blank" class="logo-discord">
+                    <img src="assets/discord.png" alt="Discord" class="discord-icon">
+                </a>
                 <a href="https://github.com/lucovisa" target="_blank" class="logo-paw">
                     <img src="assets/icon.ico" alt="Lucovisa" class="logo-icon">
                 </a>
@@ -50,7 +53,7 @@
     <section class="hero">
         <div class="container">
             <h1 onclick="location.reload()">Cat Digger</h1>
-            <p class="subtitle">Cooperative game in development</p>
+            <p class="subtitle">Cooperative game with procedural generation</p>
             <span class="badge">In Development</span>
         </div>
     </section>
@@ -107,8 +110,9 @@
         <section id="store" class="section tab-panel">
             <div class="container">
                 <h2>Store</h2>
-                <p class="empty-text">The game is not announced yet.</p>
-                <button class="btn" onclick="notAnnounced()">Steam</button>
+                <div class="store-buttons">
+                    <button class="btn" onclick="openModal('The game is not announced yet.')">Steam</button>
+                </div>
             </div>
         </section>
 
@@ -116,19 +120,22 @@
             <div class="container">
                 <h2>Developer</h2>
                 <p class="dev-name">Lucovisa</p>
-                <div class="dev-actions">
-                    <button class="btn" onclick="copyDevLink()">Copy</button>
-                    <a href="https://lucovisa.github.io/Lucovisa/" target="_blank" class="btn btn-outline">Open</a>
+                <div class="links">
+                    <a href="https://lucovisa.github.io/Lucovisa/" target="_blank">Website</a>
+                    <a href="https://github.com/lucovisa" target="_blank">GitHub</a>
+                    <a href="https://twitter.com/Lukovica467771" target="_blank">Twitter</a>
+                    <a href="https://steamcommunity.com/id/Lucovisa" target="_blank">Steam</a>
+                    <a href="mailto:lucovisa24@gmail.com">Email</a>
+                    <a href="https://phantom.app/" target="_blank">Phantom: @lucovisa</a>
                 </div>
-                <p class="empty-text dev-link-text" id="devLink">https://lucovisa.github.io/Lucovisa/</p>
             </div>
         </section>
 
         <section id="donate" class="section tab-panel">
             <div class="container">
                 <h2>Support the development</h2>
-                <a href="#" class="btn donate-btn">Donate ❤</a>
-                <div class="wallets">
+                <button class="btn donate-btn" onclick="toggleWallets()">Donate ❤</button>
+                <div class="wallets" id="walletsBlock">
                     <div class="wallet">
                         <div class="wallet-info">
                             <span class="wallet-name">ETH/USDT (ERC 20)</span>
@@ -164,6 +171,19 @@
 
     <footer class="footer">
     </footer>
+
+    <div class="modal-overlay" id="modal" onclick="closeModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <span class="modal-icon">🌐</span>
+                <span class="modal-url">lucovisa.github.io</span>
+            </div>
+            <p class="modal-text" id="modalText">The game is not announced yet.</p>
+            <div class="modal-footer">
+                <button class="modal-btn" onclick="closeModal()">OK</button>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
