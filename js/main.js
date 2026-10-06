@@ -10,6 +10,22 @@ function copyWallet(id) {
     });
 }
 
+function copyDevLink() {
+    const link = document.getElementById('devLink').textContent;
+    const btn = event.target;
+    navigator.clipboard.writeText(link).then(() => {
+        const original = btn.textContent;
+        btn.textContent = 'Copied';
+        setTimeout(() => {
+            btn.textContent = original;
+        }, 2000);
+    });
+}
+
+function notAnnounced() {
+    alert('The game is not announced yet.');
+}
+
 function toggleTheme() {
     const html = document.documentElement;
     const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
@@ -18,10 +34,8 @@ function toggleTheme() {
 }
 
 function switchTab(tabId) {
-    const panels = document.querySelectorAll('.tab-panel');
-    const links = document.querySelectorAll('.nav-link');
-    panels.forEach(p => p.classList.remove('active'));
-    links.forEach(l => l.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
     const panel = document.getElementById(tabId);
     const link = document.querySelector('.nav-link[data-tab="' + tabId + '"]');
     if (panel) panel.classList.add('active');

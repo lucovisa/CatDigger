@@ -97,27 +97,29 @@ body {
     flex-wrap: wrap;
 }
 
-.nav a {
+.nav button {
+    background: transparent;
+    border: none;
     color: var(--text-muted);
-    text-decoration: none;
+    font-family: inherit;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: color 0.2s;
     cursor: pointer;
+    padding: 0 0 4px 0;
     position: relative;
-    padding-bottom: 4px;
+    transition: color 0.2s;
 }
 
-.nav a:hover {
+.nav button:hover {
     color: var(--text);
 }
 
-.nav a.active {
+.nav button.active {
     color: var(--text);
 }
 
-.nav a.active::after {
+.nav button.active::after {
     content: "";
     position: absolute;
     left: 0;
@@ -344,6 +346,8 @@ body {
     text-transform: uppercase;
     border-radius: 6px;
     border: 1px solid var(--accent);
+    cursor: pointer;
+    font-family: inherit;
     transition: transform 0.2s, opacity 0.2s;
 }
 
@@ -452,6 +456,7 @@ body {
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
+    font-family: inherit;
     transition: border-color 0.2s, background-color 0.2s;
     flex-shrink: 0;
     margin-left: 15px;
@@ -465,6 +470,30 @@ body {
     padding: 40px 20px;
     border-top: 1px solid var(--border);
     transition: border-color 0.3s;
+}
+
+.empty-text {
+    font-size: 16px;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.dev-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.dev-link-text {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    letter-spacing: 0;
+    text-transform: none;
+    word-break: break-all;
 }
 
 @media (max-width: 900px) {
@@ -510,10 +539,4 @@ body {
     .hero h1 {
         font-size: 36px;
     }
-}
-.empty-text {
-    font-size: 16px;
-    color: var(--text-muted);
-    letter-spacing: 2px;
-    text-transform: uppercase;
 }

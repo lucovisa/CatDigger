@@ -86,12 +86,7 @@
         <section id="concept" class="section section-alt tab-panel">
             <div class="container">
                 <h2>Concept Art</h2>
-                <div class="gallery">
-                    <div class="gallery-item">Concept 1</div>
-                    <div class="gallery-item">Concept 2</div>
-                    <div class="gallery-item">Concept 3</div>
-                    <div class="gallery-item">Concept 4</div>
-                </div>
+                <p class="empty-text">No concept art yet.</p>
             </div>
         </section>
 
@@ -113,6 +108,7 @@
             <div class="container">
                 <h2>Store</h2>
                 <p class="empty-text">The game is not announced yet.</p>
+                <button class="btn" onclick="notAnnounced()">Steam</button>
             </div>
         </section>
 
@@ -120,14 +116,11 @@
             <div class="container">
                 <h2>Developer</h2>
                 <p class="dev-name">Lucovisa</p>
-                <div class="links">
-                    <a href="https://lucovisa.github.io/Lucovisa/" target="_blank">Website</a>
-                    <a href="https://github.com/lucovisa" target="_blank">GitHub</a>
-                    <a href="https://twitter.com/Lukovica467771" target="_blank">Twitter</a>
-                    <a href="https://steamcommunity.com/id/Lucovisa" target="_blank">Steam</a>
-                    <a href="mailto:lucovisa24@gmail.com">Email</a>
-                    <a href="https://phantom.app/" target="_blank">Phantom: @lucovisa</a>
+                <div class="dev-actions">
+                    <button class="btn" onclick="copyDevLink()">Copy</button>
+                    <a href="https://lucovisa.github.io/Lucovisa/" target="_blank" class="btn btn-outline">Open</a>
                 </div>
+                <p class="empty-text dev-link-text" id="devLink">https://lucovisa.github.io/Lucovisa/</p>
             </div>
         </section>
 
