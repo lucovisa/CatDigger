@@ -29,6 +29,8 @@ function toggleWallets() {
 function toggleHero() {
     const hero = document.getElementById('hero');
     hero.classList.toggle('collapsed');
+    const collapsed = hero.classList.contains('collapsed');
+    localStorage.setItem('heroCollapsed', collapsed ? '1' : '0');
 }
 
 function openModal(text) {
@@ -63,6 +65,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const saved = localStorage.getItem('theme');
     if (saved) {
         document.documentElement.setAttribute('data-theme', saved);
+    }
+
+    const heroCollapsed = localStorage.getItem('heroCollapsed');
+    if (heroCollapsed === '1') {
+        document.getElementById('hero').classList.add('collapsed');
     }
 
     const hash = window.location.hash.replace('#', '');
