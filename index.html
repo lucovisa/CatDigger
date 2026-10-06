@@ -25,29 +25,29 @@
 </head>
 <body>
     <header class="header">
-        <a href="https://discord.gg/xaCFGJAwr4" target="_blank" class="discord-corner">
-            <img src="assets/discord.png" alt="Discord" class="discord-icon">
-        </a>
-        <div class="container">
+        <div class="header-left">
+            <a href="https://discord.gg/xaCFGJAwr4" target="_blank" class="discord-corner">
+                <img src="assets/discord.png" alt="Discord" class="discord-icon">
+            </a>
             <div class="logo">
                 <a href="https://github.com/lucovisa" target="_blank" class="logo-paw">
                     <img src="assets/icon.ico" alt="Lucovisa" class="logo-icon">
                 </a>
                 <a href="https://lucovisa.github.io/CatDigger/" class="logo-text">Cat Digger</a>
             </div>
-            <nav class="nav">
-                <button class="nav-link active" data-tab="about">About</button>
-                <button class="nav-link" data-tab="concept">Concept Art</button>
-                <button class="nav-link" data-tab="screenshots">Screenshots</button>
-                <button class="nav-link" data-tab="reviews">Reviews</button>
-                <button class="nav-link" data-tab="store">Store</button>
-                <button class="nav-link" data-tab="developer">Developer</button>
-                <button class="nav-link" data-tab="donate">Donate</button>
-            </nav>
-            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-                <span class="theme-icon">◐</span>
-            </button>
         </div>
+        <nav class="nav">
+            <button class="nav-link active" data-tab="about">About</button>
+            <button class="nav-link" data-tab="concept">Concept Art</button>
+            <button class="nav-link" data-tab="screenshots">Screenshots</button>
+            <button class="nav-link" data-tab="reviews">Reviews</button>
+            <button class="nav-link" data-tab="store">Store</button>
+            <button class="nav-link" data-tab="developer">Developer</button>
+            <button class="nav-link" data-tab="donate">Donate</button>
+        </nav>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+            <span class="theme-icon">◐</span>
+        </button>
     </header>
 
     <section class="hero" id="hero">
@@ -86,44 +86,45 @@
             </div>
         </section>
 
-        <section id="concept" class="section section-alt tab-panel">
+        <section id="concept" class="section tab-panel">
             <div class="container">
                 <h2>Concept Art</h2>
                 <p class="empty-text">No concept art yet.</p>
             </div>
         </section>
 
-        <section id="screenshots" class="section tab-panel">
+        <section id="screenshots" class="section section-alt tab-panel">
             <div class="container">
                 <h2>Screenshots</h2>
                 <p class="empty-text">No screenshots yet.</p>
             </div>
         </section>
 
-        <section id="reviews" class="section section-alt tab-panel">
+        <section id="reviews" class="section tab-panel">
             <div class="container">
                 <h2>Reviews</h2>
                 <p class="empty-text">No reviews yet.</p>
             </div>
         </section>
 
-        <section id="store" class="section tab-panel">
+        <section id="store" class="section section-alt tab-panel">
             <div class="container">
                 <h2>Store</h2>
                 <div class="store-buttons">
                     <button class="btn" onclick="openModal('The game is not announced yet.')">Steam</button>
-                    <button class="btn btn-outline" onclick="openModal('The game is not announced yet.')">Buy</button>
+                    <button class="btn" onclick="openModal('The game is not announced yet.')">Buy</button>
                 </div>
             </div>
         </section>
 
-        <section id="developer" class="section section-alt tab-panel">
+        <section id="developer" class="section tab-panel">
             <div class="container">
                 <h2>Developer</h2>
                 <p class="dev-name">Lucovisa</p>
                 <div class="dev-list">
                     <div class="dev-row">
                         <span class="dev-label">Website</span>
+                        <span class="dev-url">https://lucovisa.github.io/Lucovisa/</span>
                         <div class="dev-row-actions">
                             <a href="https://lucovisa.github.io/Lucovisa/" target="_blank" class="btn-mini">Open</a>
                             <button class="btn-mini" onclick="copyText('https://lucovisa.github.io/Lucovisa/')">Copy</button>
@@ -131,6 +132,7 @@
                     </div>
                     <div class="dev-row">
                         <span class="dev-label">GitHub</span>
+                        <span class="dev-url">https://github.com/lucovisa</span>
                         <div class="dev-row-actions">
                             <a href="https://github.com/lucovisa" target="_blank" class="btn-mini">Open</a>
                             <button class="btn-mini" onclick="copyText('https://github.com/lucovisa')">Copy</button>
@@ -138,6 +140,7 @@
                     </div>
                     <div class="dev-row">
                         <span class="dev-label">Twitter</span>
+                        <span class="dev-url">https://twitter.com/Lukovica467771</span>
                         <div class="dev-row-actions">
                             <a href="https://twitter.com/Lukovica467771" target="_blank" class="btn-mini">Open</a>
                             <button class="btn-mini" onclick="copyText('https://twitter.com/Lukovica467771')">Copy</button>
@@ -145,6 +148,7 @@
                     </div>
                     <div class="dev-row">
                         <span class="dev-label">Steam</span>
+                        <span class="dev-url">https://steamcommunity.com/id/Lucovisa</span>
                         <div class="dev-row-actions">
                             <a href="https://steamcommunity.com/id/Lucovisa" target="_blank" class="btn-mini">Open</a>
                             <button class="btn-mini" onclick="copyText('https://steamcommunity.com/id/Lucovisa')">Copy</button>
@@ -152,6 +156,7 @@
                     </div>
                     <div class="dev-row">
                         <span class="dev-label">Email</span>
+                        <span class="dev-url">lucovisa24@gmail.com</span>
                         <div class="dev-row-actions">
                             <a href="mailto:lucovisa24@gmail.com" class="btn-mini">Open</a>
                             <button class="btn-mini" onclick="copyText('lucovisa24@gmail.com')">Copy</button>
@@ -159,6 +164,7 @@
                     </div>
                     <div class="dev-row">
                         <span class="dev-label">Phantom</span>
+                        <span class="dev-url">@lucovisa</span>
                         <div class="dev-row-actions">
                             <a href="https://phantom.app/" target="_blank" class="btn-mini">Open</a>
                             <button class="btn-mini" onclick="copyText('@lucovisa')">Copy</button>
@@ -168,7 +174,7 @@
             </div>
         </section>
 
-        <section id="donate" class="section tab-panel">
+        <section id="donate" class="section section-alt tab-panel">
             <div class="container">
                 <h2>Support the development</h2>
                 <button class="btn donate-btn" onclick="toggleWallets()">Donate ❤</button>
