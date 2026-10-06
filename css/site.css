@@ -52,7 +52,7 @@ body {
     z-index: 100;
     display: flex;
     align-items: center;
-    padding: 15px 20px;
+    padding: 12px 20px;
     gap: 20px;
     transition: background-color 0.3s, border-color 0.3s;
 }
@@ -60,54 +60,32 @@ body {
 .header-left {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     flex-shrink: 0;
 }
 
-.discord-corner {
+.header-item {
     display: flex;
     align-items: center;
-}
-
-.discord-icon {
-    width: 64px;
-    height: 64px;
-    display: block;
+    text-decoration: none;
     transition: opacity 0.2s;
 }
 
-.discord-icon:hover {
+.header-item:hover {
     opacity: 0.7;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.logo-paw {
-    display: flex;
-    align-items: center;
-}
-
-.logo-icon {
-    width: 28px;
-    height: 28px;
+.header-icon {
+    width: 36px;
+    height: 36px;
     display: block;
 }
 
 .logo-text {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
     letter-spacing: 1px;
     color: var(--text);
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.logo-text:hover {
-    color: var(--text-muted);
 }
 
 .nav {
@@ -175,26 +153,6 @@ body {
     padding: 140px 20px;
     border-bottom: 1px solid var(--border);
     background: var(--bg);
-    transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
-    max-height: 500px;
-    overflow: hidden;
-}
-
-.hero.collapsed {
-    max-height: 0;
-    padding: 0 20px;
-    opacity: 0;
-    border-bottom: none;
-}
-
-.hero.collapsed h1,
-.hero.collapsed .subtitle {
-    display: none;
-}
-
-.hero.collapsed .badge {
-    display: inline-block;
-    margin: 20px 0;
 }
 
 .hero h1 {
@@ -230,7 +188,6 @@ body {
     font-size: 12px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    cursor: pointer;
 }
 
 .tab-content {
@@ -382,6 +339,13 @@ body {
     flex-shrink: 0;
     width: 90px;
     text-align: left;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+.dev-label:hover {
+    color: var(--text-muted);
 }
 
 .dev-url {
@@ -605,9 +569,15 @@ body {
         font-size: 12px;
     }
 
-    .discord-icon {
-        width: 48px;
-        height: 48px;
+    .header-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .theme-toggle {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
     }
 }
 
@@ -630,9 +600,15 @@ body {
         gap: 40px;
     }
 
-    .discord-icon {
-        width: 40px;
-        height: 40px;
+    .header-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .theme-toggle {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
     }
 
     .dev-row {
@@ -671,11 +647,6 @@ body {
 
     .hero h1 {
         font-size: 36px;
-    }
-
-    .discord-icon {
-        width: 32px;
-        height: 32px;
     }
 
     .logo-text {

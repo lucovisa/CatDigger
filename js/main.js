@@ -26,11 +26,6 @@ function toggleWallets() {
     block.classList.toggle('open');
 }
 
-function toggleHero() {
-    const hero = document.getElementById('hero');
-    hero.classList.toggle('collapsed');
-}
-
 function openModal(text) {
     document.getElementById('modalText').textContent = text;
     document.getElementById('modal').classList.add('open');
