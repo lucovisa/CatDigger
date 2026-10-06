@@ -10,13 +10,24 @@ function copyWallet(id) {
     });
 }
 
+function copyText(text) {
+    const btn = event.target;
+    navigator.clipboard.writeText(text).then(() => {
+        const original = btn.textContent;
+        btn.textContent = 'Copied';
+        setTimeout(() => {
+            btn.textContent = original;
+        }, 2000);
+    });
+}
+
 function toggleWallets() {
     const block = document.getElementById('walletsBlock');
     block.classList.toggle('open');
 }
 
 function toggleHero() {
-    const hero = document.querySelector('.hero');
+    const hero = document.getElementById('hero');
     hero.classList.toggle('collapsed');
 }
 
@@ -52,6 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const saved = localStorage.getItem('theme');
     if (saved) {
         document.documentElement.setAttribute('data-theme', saved);
+    }
+
+    const hash = window.location.hash.replace('#', '');
+    if (hash && document.getElementById(hash)) {
+        switchTab(hash, false);
     }
 
     document.querySelectorAll('.nav-link').forEach(link => {

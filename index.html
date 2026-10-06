@@ -48,10 +48,12 @@
         </button>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="container">
-            <h1 onclick="location.reload()">Cat Digger</h1>
-            <p class="subtitle">Cooperative game with procedural generation</p>
+            <div id="heroContent">
+                <h1 onclick="location.reload()">Cat Digger</h1>
+                <p class="subtitle">Cooperative game with procedural generation</p>
+            </div>
             <span class="badge" onclick="toggleHero()">In Development</span>
         </div>
     </section>
@@ -120,12 +122,48 @@
                 <h2>Developer</h2>
                 <p class="dev-name">Lucovisa</p>
                 <div class="dev-list">
-                    <a href="https://lucovisa.github.io/Lucovisa/" target="_blank" class="dev-link">Website</a>
-                    <a href="https://github.com/lucovisa" target="_blank" class="dev-link">GitHub</a>
-                    <a href="https://twitter.com/Lukovica467771" target="_blank" class="dev-link">Twitter</a>
-                    <a href="https://steamcommunity.com/id/Lucovisa" target="_blank" class="dev-link">Steam</a>
-                    <a href="mailto:lucovisa24@gmail.com" class="dev-link">Email</a>
-                    <a href="https://phantom.app/" target="_blank" class="dev-link">Phantom</a>
+                    <div class="dev-row">
+                        <a href="https://lucovisa.github.io/Lucovisa/" target="_blank" class="dev-label">Website</a>
+                        <span class="dev-url">https://lucovisa.github.io/Lucovisa/</span>
+                        <div class="dev-row-actions">
+                            <button class="btn-mini" onclick="copyText('https://lucovisa.github.io/Lucovisa/')">Copy</button>
+                        </div>
+                    </div>
+                    <div class="dev-row">
+                        <a href="https://github.com" target="_blank" class="dev-label">GitHub</a>
+                        <span class="dev-url">https://github.com/lucovisa</span>
+                        <div class="dev-row-actions">
+                            <button class="btn-mini" onclick="copyText('https://github.com/lucovisa')">Copy</button>
+                        </div>
+                    </div>
+                    <div class="dev-row">
+                        <a href="https://twitter.com" target="_blank" class="dev-label">Twitter</a>
+                        <span class="dev-url">https://twitter.com/Lukovica467771</span>
+                        <div class="dev-row-actions">
+                            <button class="btn-mini" onclick="copyText('https://twitter.com/Lukovica467771')">Copy</button>
+                        </div>
+                    </div>
+                    <div class="dev-row">
+                        <a href="https://store.steampowered.com" target="_blank" class="dev-label">Steam</a>
+                        <span class="dev-url">https://steamcommunity.com/id/Lucovisa</span>
+                        <div class="dev-row-actions">
+                            <button class="btn-mini" onclick="copyText('https://steamcommunity.com/id/Lucovisa')">Copy</button>
+                        </div>
+                    </div>
+                    <div class="dev-row">
+                        <a href="https://mail.google.com" target="_blank" class="dev-label">Email</a>
+                        <span class="dev-url">lucovisa24@gmail.com</span>
+                        <div class="dev-row-actions">
+                            <button class="btn-mini" onclick="copyText('lucovisa24@gmail.com')">Copy</button>
+                        </div>
+                    </div>
+                    <div class="dev-row">
+                        <a href="https://phantom.app" target="_blank" class="dev-label">Phantom</a>
+                        <span class="dev-url">@lucovisa</span>
+                        <div class="dev-row-actions">
+                            <button class="btn-mini" onclick="copyText('@lucovisa')">Copy</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
