@@ -25,15 +25,15 @@
 </head>
 <body>
     <header class="header">
+        <a href="https://discord.gg/xaCFGJAwr4" target="_blank" class="discord-corner">
+            <img src="assets/discord.png" alt="Discord" class="discord-icon">
+        </a>
         <div class="container">
             <div class="logo">
-                <a href="https://discord.gg/xaCFGJAwr4" target="_blank" class="logo-discord">
-                    <img src="assets/discord.png" alt="Discord" class="discord-icon">
-                </a>
                 <a href="https://github.com/lucovisa" target="_blank" class="logo-paw">
                     <img src="assets/icon.ico" alt="Lucovisa" class="logo-icon">
                 </a>
-                <a href="https://github.com/lucovisa/CatDigger" target="_blank" class="logo-text">Cat Digger</a>
+                <a href="https://lucovisa.github.io/CatDigger/" class="logo-text">Cat Digger</a>
             </div>
             <nav class="nav">
                 <button class="nav-link active" data-tab="about">About</button>
@@ -50,11 +50,11 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="container">
             <h1 onclick="location.reload()">Cat Digger</h1>
             <p class="subtitle">Cooperative game with procedural generation</p>
-            <span class="badge">In Development</span>
+            <span class="badge" onclick="toggleHero()">In Development</span>
         </div>
     </section>
 
@@ -112,6 +112,7 @@
                 <h2>Store</h2>
                 <div class="store-buttons">
                     <button class="btn" onclick="openModal('The game is not announced yet.')">Steam</button>
+                    <button class="btn btn-outline" onclick="openModal('The game is not announced yet.')">Buy</button>
                 </div>
             </div>
         </section>
@@ -120,13 +121,49 @@
             <div class="container">
                 <h2>Developer</h2>
                 <p class="dev-name">Lucovisa</p>
-                <div class="links">
-                    <a href="https://lucovisa.github.io/Lucovisa/" target="_blank">Website</a>
-                    <a href="https://github.com/lucovisa" target="_blank">GitHub</a>
-                    <a href="https://twitter.com/Lukovica467771" target="_blank">Twitter</a>
-                    <a href="https://steamcommunity.com/id/Lucovisa" target="_blank">Steam</a>
-                    <a href="mailto:lucovisa24@gmail.com">Email</a>
-                    <a href="https://phantom.app/" target="_blank">Phantom: @lucovisa</a>
+                <div class="dev-list">
+                    <div class="dev-row">
+                        <span class="dev-label">Website</span>
+                        <div class="dev-row-actions">
+                            <a href="https://lucovisa.github.io/Lucovisa/" target="_blank" class="btn-mini">Open</a>
+                            <button class="btn-mini" onclick="copyText('https://lucovisa.github.io/Lucovisa/')">Copy</button>
+                        </div>
+                    </div>
+                    <div class="dev-row">
+                        <span class="dev-label">GitHub</span>
+                        <div class="dev-row-actions">
+                            <a href="https://github.com/lucovisa" target="_blank" class="btn-mini">Open</a>
+                            <button class="btn-mini" onclick="copyText('https://github.com/lucovisa')">Copy</button>
+                        </div>
+                    </div>
+                    <div class="dev-row">
+                        <span class="dev-label">Twitter</span>
+                        <div class="dev-row-actions">
+                            <a href="https://twitter.com/Lukovica467771" target="_blank" class="btn-mini">Open</a>
+                            <button class="btn-mini" onclick="copyText('https://twitter.com/Lukovica467771')">Copy</button>
+                        </div>
+                    </div>
+                    <div class="dev-row">
+                        <span class="dev-label">Steam</span>
+                        <div class="dev-row-actions">
+                            <a href="https://steamcommunity.com/id/Lucovisa" target="_blank" class="btn-mini">Open</a>
+                            <button class="btn-mini" onclick="copyText('https://steamcommunity.com/id/Lucovisa')">Copy</button>
+                        </div>
+                    </div>
+                    <div class="dev-row">
+                        <span class="dev-label">Email</span>
+                        <div class="dev-row-actions">
+                            <a href="mailto:lucovisa24@gmail.com" class="btn-mini">Open</a>
+                            <button class="btn-mini" onclick="copyText('lucovisa24@gmail.com')">Copy</button>
+                        </div>
+                    </div>
+                    <div class="dev-row">
+                        <span class="dev-label">Phantom</span>
+                        <div class="dev-row-actions">
+                            <a href="https://phantom.app/" target="_blank" class="btn-mini">Open</a>
+                            <button class="btn-mini" onclick="copyText('@lucovisa')">Copy</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -175,8 +212,8 @@
     <div class="modal-overlay" id="modal" onclick="closeModal(event)">
         <div class="modal" onclick="event.stopPropagation()">
             <div class="modal-header">
-                <span class="modal-icon">🌐</span>
-                <span class="modal-url">lucovisa.github.io</span>
+                <span class="modal-icon">🛒</span>
+                <span class="modal-url">WARNING</span>
             </div>
             <p class="modal-text" id="modalText">The game is not announced yet.</p>
             <div class="modal-footer">

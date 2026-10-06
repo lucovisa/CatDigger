@@ -57,30 +57,35 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 15px 20px 15px 60px;
     gap: 20px;
 }
 
-.logo {
+.discord-corner {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     align-items: center;
-    gap: 12px;
-}
-
-.logo-discord {
-    display: flex;
-    align-items: center;
+    z-index: 101;
 }
 
 .discord-icon {
-    width: 128px;
-    height: 128px;
+    width: 32px;
+    height: 32px;
     display: block;
     transition: opacity 0.2s;
 }
 
 .discord-icon:hover {
     opacity: 0.7;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .logo-paw {
@@ -169,6 +174,26 @@ body {
     padding: 140px 20px;
     border-bottom: 1px solid var(--border);
     background: var(--bg);
+    transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.hero.collapsed {
+    max-height: 0;
+    padding: 0 20px;
+    opacity: 0;
+    border-bottom: none;
+}
+
+.hero.collapsed h1,
+.hero.collapsed .subtitle {
+    display: none;
+}
+
+.hero.collapsed .badge {
+    display: inline-block;
+    margin: 20px 0;
 }
 
 .hero h1 {
@@ -204,6 +229,7 @@ body {
     font-size: 12px;
     letter-spacing: 3px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .tab-content {
@@ -339,10 +365,6 @@ body {
     letter-spacing: 2px;
 }
 
-.store-text {
-    margin-bottom: 30px !important;
-}
-
 .store-buttons {
     display: flex;
     justify-content: center;
@@ -395,29 +417,56 @@ body {
     text-transform: uppercase;
 }
 
-.links {
+.dev-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 520px;
+    margin: 0 auto;
 }
 
-.links a {
-    display: inline-block;
-    padding: 12px 24px;
+.dev-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--bg-card);
-    color: var(--text);
-    text-decoration: none;
-    border-radius: 6px;
     border: 1px solid var(--border);
-    font-size: 13px;
-    letter-spacing: 1px;
-    transition: transform 0.2s, border-color 0.2s, background-color 0.3s, color 0.3s;
+    border-radius: 8px;
+    padding: 12px 18px;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
-.links a:hover {
+.dev-label {
+    font-size: 14px;
+    color: var(--text);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.dev-row-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-mini {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: inherit;
+    text-decoration: none;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.btn-mini:hover {
     border-color: var(--text);
-    transform: translateY(-2px);
 }
 
 .wallets {
@@ -504,22 +553,6 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 30px;
-}
-
-.dev-actions {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 25px;
-}
-
-.dev-link-text {
-    font-family: 'Courier New', monospace;
-    font-size: 13px;
-    letter-spacing: 0;
-    text-transform: none;
-    word-break: break-all;
 }
 
 .modal-overlay {
@@ -630,8 +663,8 @@ body {
     }
 
     .discord-icon {
-        width: 64px;
-        height: 64px;
+        width: 28px;
+        height: 28px;
     }
 }
 
@@ -660,7 +693,7 @@ body {
     }
 
     .discord-icon {
-        width: 48px;
-        height: 48px;
+        width: 26px;
+        height: 26px;
     }
 }
