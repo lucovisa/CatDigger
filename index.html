@@ -27,7 +27,7 @@
     <header class="header">
         <div class="header-left">
             <a href="https://discord.gg/xaCFGJAwr4" target="_blank" class="header-item">
-                <img src="assets/discord.png" alt="Discord" class="header-icon">
+                <img src="assets/discord.png" alt="Discord" class="discord-big">
             </a>
             <a href="https://github.com/lucovisa" target="_blank" class="header-item">
                 <img src="assets/icon.ico" alt="Lucovisa" class="header-icon">
@@ -35,7 +35,7 @@
             <a href="https://lucovisa.github.io/CatDigger/" class="header-item logo-text">Cat Digger</a>
         </div>
         <nav class="nav">
-            <button class="nav-link active" data-tab="about">About</button>
+            <button class="nav-link" data-tab="about">About</button>
             <button class="nav-link" data-tab="concept">Concept Art</button>
             <button class="nav-link" data-tab="screenshots">Screenshots</button>
             <button class="nav-link" data-tab="reviews">Reviews</button>
@@ -52,12 +52,12 @@
         <div class="container">
             <h1 onclick="location.reload()">Cat Digger</h1>
             <p class="subtitle">Cooperative game with procedural generation</p>
-            <span class="badge">In Development</span>
+            <span class="badge" onclick="toggleHero()">In Development</span>
         </div>
     </section>
 
     <main class="tab-content">
-        <section id="about" class="section tab-panel active">
+        <section id="about" class="section tab-panel">
             <div class="container">
                 <h2>About the game</h2>
                 <div class="about-grid">
@@ -91,7 +91,7 @@
             </div>
         </section>
 
-        <section id="screenshots" class="section tab-panel">
+        <section id="screenshots" class="section section-alt tab-panel">
             <div class="container">
                 <h2>Screenshots</h2>
                 <p class="empty-text">No screenshots yet.</p>
@@ -115,53 +115,17 @@
             </div>
         </section>
 
-        <section id="developer" class="section section-alt tab-panel">
+        <section id="developer" class="section tab-panel">
             <div class="container">
                 <h2>Developer</h2>
                 <p class="dev-name">Lucovisa</p>
                 <div class="dev-list">
-                    <div class="dev-row">
-                        <a href="https://lucovisa.github.io/Lucovisa/" target="_blank" class="dev-label">Website</a>
-                        <span class="dev-url">https://lucovisa.github.io/Lucovisa/</span>
-                        <div class="dev-row-actions">
-                            <button class="btn-mini" onclick="copyText('https://lucovisa.github.io/Lucovisa/')">Copy</button>
-                        </div>
-                    </div>
-                    <div class="dev-row">
-                        <a href="https://github.com/lucovisa" target="_blank" class="dev-label">GitHub</a>
-                        <span class="dev-url">https://github.com/lucovisa</span>
-                        <div class="dev-row-actions">
-                            <button class="btn-mini" onclick="copyText('https://github.com/lucovisa')">Copy</button>
-                        </div>
-                    </div>
-                    <div class="dev-row">
-                        <a href="https://twitter.com/Lukovica467771" target="_blank" class="dev-label">Twitter</a>
-                        <span class="dev-url">https://twitter.com/Lukovica467771</span>
-                        <div class="dev-row-actions">
-                            <button class="btn-mini" onclick="copyText('https://twitter.com/Lukovica467771')">Copy</button>
-                        </div>
-                    </div>
-                    <div class="dev-row">
-                        <a href="https://steamcommunity.com/id/Lucovisa" target="_blank" class="dev-label">Steam</a>
-                        <span class="dev-url">https://steamcommunity.com/id/Lucovisa</span>
-                        <div class="dev-row-actions">
-                            <button class="btn-mini" onclick="copyText('https://steamcommunity.com/id/Lucovisa')">Copy</button>
-                        </div>
-                    </div>
-                    <div class="dev-row">
-                        <a href="mailto:lucovisa24@gmail.com" class="dev-label">Email</a>
-                        <span class="dev-url">lucovisa24@gmail.com</span>
-                        <div class="dev-row-actions">
-                            <button class="btn-mini" onclick="copyText('lucovisa24@gmail.com')">Copy</button>
-                        </div>
-                    </div>
-                    <div class="dev-row">
-                        <a href="https://phantom.app/" target="_blank" class="dev-label">Phantom</a>
-                        <span class="dev-url">@lucovisa</span>
-                        <div class="dev-row-actions">
-                            <button class="btn-mini" onclick="copyText('@lucovisa')">Copy</button>
-                        </div>
-                    </div>
+                    <a href="https://lucovisa.github.io/Lucovisa/" target="_blank" class="dev-link">Website</a>
+                    <a href="https://github.com/lucovisa" target="_blank" class="dev-link">GitHub</a>
+                    <a href="https://twitter.com/Lukovica467771" target="_blank" class="dev-link">Twitter</a>
+                    <a href="https://steamcommunity.com/id/Lucovisa" target="_blank" class="dev-link">Steam</a>
+                    <a href="mailto:lucovisa24@gmail.com" class="dev-link">Email</a>
+                    <a href="https://phantom.app/" target="_blank" class="dev-link">Phantom</a>
                 </div>
             </div>
         </section>

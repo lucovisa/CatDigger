@@ -10,20 +10,14 @@ function copyWallet(id) {
     });
 }
 
-function copyText(text) {
-    const btn = event.target;
-    navigator.clipboard.writeText(text).then(() => {
-        const original = btn.textContent;
-        btn.textContent = 'Copied';
-        setTimeout(() => {
-            btn.textContent = original;
-        }, 2000);
-    });
-}
-
 function toggleWallets() {
     const block = document.getElementById('walletsBlock');
     block.classList.toggle('open');
+}
+
+function toggleHero() {
+    const hero = document.querySelector('.hero');
+    hero.classList.toggle('collapsed');
 }
 
 function openModal(text) {
@@ -42,13 +36,16 @@ function toggleTheme() {
     localStorage.setItem('theme', next);
 }
 
-function switchTab(tabId) {
+function switchTab(tabId, updateHash) {
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
     const panel = document.getElementById(tabId);
     const link = document.querySelector('.nav-link[data-tab="' + tabId + '"]');
     if (panel) panel.classList.add('active');
     if (link) link.classList.add('active');
+    if (updateHash !== false) {
+        history.replaceState(null, '', '#' + tabId);
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -56,8 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (saved) {
         document.documentElement.setAttribute('data-theme', saved);
     }
-
-    switchTab('about');
 
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
